@@ -1,4 +1,3 @@
-
 .git/
 .nfs*
 *.dll
@@ -8,3 +7,7 @@ core.*
 .breakpoints
 .idea/
 .vscode/
+node_modules/
+*.log
+cython_debug/
+.1024.nix
