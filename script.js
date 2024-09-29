@@ -10,8 +10,20 @@ const game = () => {
 
     playBtn.addEventListener("click", () => {
       introScreen.classList.add("fadeOut");
+      match.classList.remove("fadeOut"); 
       match.classList.add("fadeIn");
     });
+  };
+
+  const showWinReminder = () => {
+    console.log('赢家提醒函数被调用'); // 调试信息
+    const reminder = document.createElement('div');
+    reminder.innerText = 'You win!';
+    reminder.classList.add('win-reminder');
+    document.body.appendChild(reminder);
+    setTimeout(() => {
+      reminder.remove();
+    }, 3000);
   };
   //Play Match
   const playMatch = () => {
@@ -69,6 +81,7 @@ const game = () => {
         winner.textContent = "玩家赢";
         pScore++;
         updateScore();
+        showWinReminder();
         return;
       } else {
         winner.textContent = "电脑赢";
@@ -88,6 +101,7 @@ const game = () => {
         winner.textContent = "玩家赢";
         pScore++;
         updateScore();
+        showWinReminder(); 
         return;
       }
     }
@@ -102,6 +116,7 @@ const game = () => {
         winner.textContent = "玩家赢";
         pScore++;
         updateScore();
+        showWinReminder(); 
         return;
       }
     }
