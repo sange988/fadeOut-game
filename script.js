@@ -7,11 +7,17 @@ const game = () => {
     const playBtn = document.querySelector(".intro button");
     const introScreen = document.querySelector(".intro");
     const match = document.querySelector(".match");
+    const modal = document.querySelector(".modal");
 
     playBtn.addEventListener("click", () => {
       introScreen.classList.add("fadeOut");
       match.classList.remove("fadeOut"); 
       match.classList.add("fadeIn");
+      modal.style.display = "block";
+    });
+
+    document.getElementById("close-modal").addEventListener("click", () => {
+      modal.style.display = "none";
     });
   };
 
