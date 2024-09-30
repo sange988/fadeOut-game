@@ -10,4 +10,3 @@ core.*
 node_modules/
 *.log
 cython_debug/
-.1024.nix

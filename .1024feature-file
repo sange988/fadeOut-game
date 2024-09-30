@@ -1,7 +1,0 @@
-fileChangeLogs:
-  - '.1024'
-  - .gitignore
-  - index.html
-  - script.js
-  - tempfile
-  - style.css
